@@ -9,3 +9,15 @@
       </ul>
     </li>
   </ul>
+
+<h2>Create a Task</h2>
+<form [formGroup]="task_form" (ngSubmit)="onSubmit()">
+
+    <label for="title">Title</label>
+    <input type="text" formControlName="title" required>
+    <br>
+    <label for="content">Content</label>
+    <input type="text" formControlName="content" required>
+    <br>
+    <button type="submit">Add Task</button>
+</form>
