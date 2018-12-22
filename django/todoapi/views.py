@@ -5,6 +5,9 @@ from rest_framework import generics
 
 from .utils import get_auth0_user_id_from_request
 
+from rest_framework.permissions import IsAuthenticated
+from .permissions import IsCreator
+
 # Lists and Creates entries of Task.
 class TaskList(generics.ListCreateAPIView):
     """
@@ -33,4 +36,5 @@ class TaskDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+    permission_classes = [IsAuthenticated,IsCreator]
     lookup_url_kwarg = 'task_id'
