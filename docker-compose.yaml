@@ -13,6 +13,8 @@ services:
       - "80:80"
     depends_on:
       - db
+    environment:
+      - DJANGO_SETTINGS=dev
   ng:
     container_name: ng
     build: angular
