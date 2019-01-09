@@ -5,3 +5,4 @@ psycopg2
 djangorestframework-jwt
 cryptography
 python-jose
+uWSGI==2.0.17.1
