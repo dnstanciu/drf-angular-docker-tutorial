@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  apiUrl: 'http://localhost/api',
   auth: {
     clientID: 'YOUR-AUTH0-CLIENT-ID',
     domain: 'YOUR-AUTH0-DOMAIN', // e.g., you.auth0.com
