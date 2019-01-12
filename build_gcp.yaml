@@ -1,0 +1,15 @@
+steps:
+# Clone the repository.
+- name: 'gcr.io/cloud-builders/git'
+  args:
+  - clone
+  - '--depth'
+  - '1'
+  - https://github.com/dnstanciu/drf-angular-docker-tutorial.git
+
+# Build and tag the image.
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/yourproject/version1', './drf-angular-docker-tutorial/django']
+
+# Publish the image to Container Registry.
+images: ['gcr.io/yourproject/version1']
