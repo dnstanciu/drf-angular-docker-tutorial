@@ -1,5 +1,5 @@
 Django==2.2.20
-djangorestframework==3.9.1
+djangorestframework==3.11.2
 django-cors-headers==3.2.1
 psycopg2
 djangorestframework-jwt
